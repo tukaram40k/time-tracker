@@ -1,0 +1,23 @@
+{
+  "name": "time-tracker",
+  "version": "1.0.0",
+  "description": "desktop time tracker app built with electron",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tukaram40k/time-tracker.git"
+  },
+  "author": "tukaram40k",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tukaram40k/time-tracker/issues"
+  },
+  "homepage": "https://github.com/tukaram40k/time-tracker#readme",
+  "devDependencies": {
+    "electron": "^33.2.1"
+  }
+}
