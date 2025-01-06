@@ -1,2 +1,7 @@
-const information = document.getElementById('info')
-information.innerText = `This app is using Chrome (v${versions.chrome()}), Node.js (v${versions.node()}), and Electron (v${versions.electron()})`
+document.addEventListener("DOMContentLoaded", () => {
+    const startTimerButton = document.getElementById("start-timer-button");
+
+    startTimerButton.addEventListener("click", () => {
+        window.electronAPI.createTimerWindow() // linter cant find electron api for some reason, ignore it
+    })
+})
