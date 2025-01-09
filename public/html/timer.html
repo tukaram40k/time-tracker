@@ -1,15 +1,32 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light dark">
-<!--    <link rel="stylesheet" href="../css/pico.purple.css">-->
-    <title>Timer</title>
-</head>
-<body>
-<main class="container">
-    <h3>I'm a timer</h3>
-</main>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="color-scheme" content="light dark">
+    <!--    <link rel="stylesheet" href="../css/pico.purple.css">-->
+        <title>Timer</title>
+    </head>
+    <body>
+    <main class="container">
+        <div class="timer-main-container">
+            <div class="timer-clock-container">
+                <h2 id="timer-clock">00:00:00:00</h2>
+    <!--            put timer clock here-->
+            </div>
+            <div class="timer-button-container">
+                <div class="timer-start-button-container">
+                    <button id="timer-start-button" type="button">start-button</button>
+                </div>
+                <div class="timer-stop-button-container">
+                    <button id="timer-stop-button" type="button">stop-button</button>
+                </div>
+                <div class="timer-reset-button-container">
+                    <button id="timer-reset-button" type="button">reset-button</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    </body>
+    <script src="../js/timer_renderer.js"></script>
 </html>
