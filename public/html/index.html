@@ -5,12 +5,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="color-scheme" content="light dark">
 <!--        <link rel="stylesheet" href="../css/pico.purple.css">-->
+        <link rel="stylesheet" href="../css/index.css">
         <title>Time Tracker</title>
     </head>
     <body>
         <main class="container">
-            <h1>Hello world!</h1>
-            <button id="create-timer-button">Click me</button>
+            <h1>now with tabs yey</h1>
+            <button id="create-timer-button">new timer</button>
+
+            <div class="tab-container">
+                <div class="tab active" data-tab="tab1">Tab 1</div>
+                <div class="tab" data-tab="tab2">Tab 2</div>
+                <div class="tab" data-tab="tab3">Tab 3</div>
+            </div>
+            <div id="tab1" class="tab-content active">Content for Tab 1</div>
+            <div id="tab2" class="tab-content">Content for Tab 2</div>
+            <div id="tab3" class="tab-content">Content for Tab 3</div>
+
         </main>
     </body>
     <script src="../js/main_renderer.js"></script>
