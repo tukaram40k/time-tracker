@@ -16,10 +16,16 @@ const createMainWindow = () => {
 // individual timer window
 const createTimerWindow = () => {
     const win = new BrowserWindow({
-        width: 800,
-        height: 600
+        width: 400,
+        height: 200,
+
+        // transparent: true, // TODO: make this look like a proper overlay
+        // frame: false,
+
+        alwaysOnTop: true // TODO: make this toggleable in settings
     })
-    // win.setMenu(null); // remove dropdown menu
+
+    win.setMenu(null); // remove dropdown menu
     win.loadFile('./public/html/timer.html')
 }
 
