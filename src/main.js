@@ -10,6 +10,8 @@ const createMainWindow = () => {
             preload: path.join(__dirname, 'preload.js')
         }
     })
+
+    // TODO: посмотреть как вообще пафы ставить надо абсолют или релатив или path.join(__dirname, 'index.html')
     win.loadFile('./renderer/html/index.html')
 }
 
@@ -20,7 +22,7 @@ const createTimerWindow = () => {
         width: 400,
         height: 200,
 
-        //transparent: true, // TODO: make this look like a proper overlay
+        transparent: true, // TODO: make this look like a proper overlay
         frame: false,
 
         alwaysOnTop: true, // TODO: make this toggleable in settings
