@@ -3,6 +3,16 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.main-container {
+    margin: 2%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #333030;
+    height: 90vh;
+}
+
+/* tabs */
 .tab-container {
     display: flex;
     border-bottom: 1px solid #ccc;
@@ -12,10 +22,11 @@ body {
     cursor: pointer;
     border: 1px solid #ccc;
     border-bottom: none;
-    background: #f4f4f4;
+    border-radius: 10px;
+    background: #333030;
 }
 .tab.active {
-    background: #fff;
+    background: #232121;
     font-weight: bold;
 }
 .tab-content {

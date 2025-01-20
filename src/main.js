@@ -10,26 +10,43 @@ const createMainWindow = () => {
             preload: path.join(__dirname, 'preload.js')
         }
     })
-    win.loadFile('./public/html/index.html')
+    win.loadFile('./renderer/html/index.html')
 }
 
+// TODO: make a toggleable option to have minimised version in the timer window
 // individual timer window
 const createTimerWindow = () => {
     const win = new BrowserWindow({
         width: 400,
         height: 200,
 
-        // transparent: true, // TODO: make this look like a proper overlay
-        // frame: false,
+        //transparent: true, // TODO: make this look like a proper overlay
+        frame: false,
 
-        alwaysOnTop: true // TODO: make this toggleable in settings
+        alwaysOnTop: true, // TODO: make this toggleable in settings
+        webPreferences: {
+            preload: path.join(__dirname, 'preload.js')
+        }
     })
 
     win.setMenu(null); // remove dropdown menu
-    win.loadFile('./public/html/timer.html')
+    win.loadFile('./renderer/html/timer.html')
 }
 
 app.whenReady().then(() => {
+    // chanel to create new timer window
     ipcMain.on('create-timer-window', createTimerWindow)
     createMainWindow()
+
+    // channel to minimize timer window
+    ipcMain.on('minimize-window', (event) => {
+        const win = BrowserWindow.getFocusedWindow();
+        win.minimize();
+    });
+
+    // channel to close timer window
+    ipcMain.on('close-window', (event) => {
+        const win = BrowserWindow.getFocusedWindow();
+        win.close();
+    });
 })

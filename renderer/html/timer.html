@@ -5,15 +5,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="color-scheme" content="light dark">
     <!--    <link rel="stylesheet" href="../css/pico.purple.css">-->
+        <link rel="stylesheet" href="../css/timer.css">
         <title>Timer</title>
     </head>
     <body>
     <main class="container">
         <div class="timer-main-container">
+            <div class="title-bar">
+                <button id="minimize">_</button>
+                <button id="close">X</button>
+            </div>
+
             <div class="timer-clock-container">
                 <h2 id="timer-clock">00:00:00:00</h2>
-    <!--            put timer clock here-->
             </div>
+
             <div class="timer-button-container">
                 <div class="timer-start-button-container">
                     <button id="timer-start-button" type="button">start-button</button>
@@ -29,4 +35,5 @@
     </main>
     </body>
     <script src="../js/timer_renderer.js"></script>
+    <script src="../js/timer_controls_renderer.js"></script>
 </html>
